@@ -1,17 +1,17 @@
 import { bancos } from "./constantes";
 
-export const estaBienFormadoElIban = (value: string): void => {
+export const isIbanFormatCorrect = (value: string): void => {
   const patron =
     /^[A-Z]{2}\d{2}(\s|-)?\d{4}(\s|\.|-)?\d{4}(\s|\.|-)?\d{2}(\s|\.|-)?\d{10}$/;
 
   const isValid = patron.test(value);
 
   if (isValid) {
-    createPElement("El IBAN está bien formado");
-    console.log("es Valido");
+    createPElement("The IBAN is well formatted");
+    console.log("Valid IBAN");
   } else {
-    createPElement("El IBAN no está bien formado");
-    console.log("no es Valido");
+    createPElement("The IBAN is not well formatted");
+    console.log("Invalid IBAN");
   }
 };
 
@@ -40,8 +40,8 @@ export const estaBienFormadoElIban = (value: string): void => {
 export const getBankViaNumber = (codigo: string): string => {
   let bank = "";
   for (let i = 0; i < bancos.length; i++) {
-    if (bancos[i].numero === codigo) {
-      bank = bancos[i].banco;
+    if (bancos[i].number === codigo) {
+      bank = bancos[i].bank;
     }
   }
   return bank;
@@ -61,36 +61,36 @@ const createPElement = (text: string): void => {
   }
 };
 
-export const validarIban = (value: string): any | false => {
-  const patron =
-    /^[A-Z]{2}\d{2}(\s|-)?(?<banco>\d{4})(\s|\.|-)?(?<sucural>\d{4})(\s|\.|-)?(?<control>\d{2})(\s|\.|-)?(?<cuenta>\d{10})$/;
+export const validateIban = (value: string): any | false => {
+  const patton =
+    /^[A-Z]{2}\d{2}(\s|-)?(?<bank>\d{4})(\s|\.|-)?(?<branch>\d{4})(\s|\.|-)?(?<control>\d{2})(\s|\.|-)?(?<account>\d{10})$/;
 
-  const coincidencia = patron.exec(value);
+  const coincidence = patton.exec(value);
 
-  if (coincidencia) {
+  if (coincidence) {
 
-    const { banco, sucural, control, cuenta } = coincidencia.groups as any;
-    const bankName = getBankViaNumber(banco);
+    const { bank, branch, control, account } = coincidence.groups as any;
+    const bankName = getBankViaNumber(bank);
     
-    createPElement("El IBAN es válido");
-    createPElement(`Banco: ${bankName}`);
-    createPElement(`Código sucursal: ${sucural}`);
-    createPElement(`Digito de control: ${control}`);
-    createPElement(`Número de cuenta: ${cuenta}`);
+    createPElement("The IBan is valid");
+    createPElement(`BanK: ${bankName}`);
+    createPElement(`Branch number: ${branch}`);
+    createPElement(`Control digits: ${control}`);
+    createPElement(`Account number: ${account}`);
 
     return true;
   } else {
     console.log("Regex did not match");
-    createPElement("El IBAN no está válido");
+    createPElement("The IBAN is not valid");
     return false;
   }
 };
 
-const obtenerValorCampo = (): string => {
-  const elementoCampo = document.querySelector("#input");
+const getInputValue = (): string => {
+  const inputField = document.querySelector("#input");
 
-  if (elementoCampo && elementoCampo instanceof HTMLInputElement) {
-    return elementoCampo.value;
+  if (inputField && inputField instanceof HTMLInputElement) {
+    return inputField.value;
   } else {
     throw new Error("No value for input found");
   }
@@ -105,7 +105,7 @@ if (searchButton && searchButton instanceof HTMLButtonElement) {
 }
 
 const handleIban = () => {
-  const userInput = obtenerValorCampo();
-  estaBienFormadoElIban(userInput);
-  validarIban(userInput);
+  const userInput = getInputValue();
+  isIbanFormatCorrect(userInput);
+  validateIban(userInput);
 };

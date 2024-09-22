@@ -1,10 +1,10 @@
 import {
-  estaBienFormadoElIban,
+  isIbanFormatCorrect,
   getBankViaNumber,
-  validarIban,
-} from "./validarIban";
+  validateIban,
+} from "./validateIban";
 
-describe("estaBienFormadoElIban", () => {
+describe("isIbanFormatCorrect", () => {
   test.each([
     ["ES21 1465 0100 72 2030876293", true],
 
@@ -18,9 +18,9 @@ describe("estaBienFormadoElIban", () => {
 
     ["ES66210004184012345678918", false],
   ])(
-    "Deberia devolver para el Iban %s el valor %s",
+    "Fx checks if IBAN is correctly formatted",
     (valor: string, expected: boolean) => {
-      expect(estaBienFormadoElIban(valor)).toBe(expected);
+      expect(isIbanFormatCorrect(valor)).toBe(expected);
     }
   );
 });
@@ -41,21 +41,21 @@ describe("getBankViaNumber", () => {
   });
 });
 
-describe("validarIban", () => {
+describe("validateIban", () => {
   it("inserts bank Iban, extrapolates bank name, branch, control number and account", () => {
     //Arrange
 
     let iban = "ES21 0061 0100 72 2030876293";
 
     //Act
-    const result = validarIban(iban);
+    const result = validateIban(iban);
 
     //Assert
     const expected = {
-      banco: "Banca March",
-      sucural: "0100",
+      bank: "Banca March",
+      branch: "0100",
       control: "72",
-      cuenta: "2030876293",
+      account: "2030876293",
     };
     //     console.log("El banco es:", 'Banca March');
     //     console.log("El sucursal es:", '0100');

@@ -1,4 +1,4 @@
-export interface Banco {
-    numero: string,
-    banco: string
+export interface Bank {
+    number: string,
+    bank: string
 }

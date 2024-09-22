@@ -1,84 +1,84 @@
-import { Banco } from "./modelo-Iban";
+import { Bank } from "./modelo-Iban";
 
-export const bancos: Banco[] = [
-  { numero: "2080", banco: "Abanca Corporación Bancaria" },
+export const bancos: Bank[] = [
+  { number: "2080", bank: "Abanca Corporación Bancaria" },
 
-  { numero: "0061", banco: "Banca March" },
+  { number: "0061", bank: "Banca March" },
 
-  { numero: "0188", banco: "Banco Alcalá" },
+  { number: "0188", bank: "Banco Alcalá" },
 
-  { numero: "0182", banco: "Banco Bilbao Vizcaya Argentaria" },
+  { number: "0182", bank: "Banco Bilbao Vizcaya Argentaria" },
 
-  { numero: "0130", banco: "Banco Caixa Geral" },
+  { number: "0130", bank: "Banco Caixa Geral" },
 
-  { numero: "0234", banco: "Banco Caminos" },
+  { number: "0234", bank: "Banco Caminos" },
 
-  { numero: "2105", banco: "Banco Castilla-La Mancha" },
+  { number: "2105", bank: "Banco Castilla-La Mancha" },
 
-  { numero: "0240", banco: "Banco de Crédito Social Cooperativo" },
+  { number: "0240", bank: "Banco de Crédito Social Cooperativo" },
 
-  { numero: "0081", banco: "Banco de Sabadell" },
+  { number: "0081", bank: "Banco de Sabadell" },
 
-  { numero: "0487", banco: "Banco Mare Nostrum" },
+  { number: "0487", bank: "Banco Mare Nostrum" },
 
-  { numero: "0186", banco: "Banco Mediolanum" },
+  { number: "0186", bank: "Banco Mediolanum" },
 
-  { numero: "0238", banco: "Banco Pastor" },
+  { number: "0238", bank: "Banco Pastor" },
 
-  { numero: "0075", banco: "Banco Popular Español" },
+  { number: "0075", bank: "Banco Popular Español" },
 
-  { numero: "0049", banco: "Banco Santander" },
+  { number: "0049", bank: "Banco Santander" },
 
-  { numero: "3873", banco: "Banco Santander Totta" },
+  { number: "3873", bank: "Banco Santander Totta" },
 
-  { numero: "2038", banco: "Bankia" },
+  { number: "2038", bank: "Bankia" },
 
-  { numero: "0128", banco: "Bankinter" },
+  { number: "0128", bank: "Bankinter" },
 
-  { numero: "0138", banco: "Bankoa" },
+  { number: "0138", bank: "Bankoa" },
 
-  { numero: "0152", banco: "Barclays Bank PLC" },
+  { number: "0152", bank: "Barclays Bank PLC" },
 
-  { numero: "3842", banco: "BNP Paribas Paris" },
+  { number: "3842", bank: "BNP Paribas Paris" },
 
-  { numero: "3025", banco: "Caixa de Credit del Enginyers" },
+  { number: "3025", bank: "Caixa de Credit del Enginyers" },
 
-  { numero: "2100", banco: "Caixabank" },
+  { number: "2100", bank: "Caixabank" },
 
-  { numero: "2045", banco: "Caja de Ahorros y Monte de Piedad de Ontinyent" },
+  { number: "2045", bank: "Caja de Ahorros y Monte de Piedad de Ontinyent" },
 
-  { numero: "3035", banco: "Caja Laboral Popular CC" },
+  { number: "3035", bank: "Caja Laboral Popular CC" },
 
   {
-    numero: "3081",
-    banco: "Caja Rural Castilla-La Mancha3058 Cajamar Caja Rural",
+    number: "3081",
+    bank: "Caja Rural Castilla-La Mancha3058 Cajamar Caja Rural",
   },
 
-  { numero: "2000", banco: "Cecabank" },
+  { number: "2000", bank: "Cecabank" },
 
-  { numero: "1474", banco: "Citibank Europe PLC" },
+  { number: "1474", bank: "Citibank Europe PLC" },
 
-  { numero: "3821", banco: "Commerzbank AG" },
+  { number: "3821", bank: "Commerzbank AG" },
 
-  { numero: "3877", banco: "Danske Bank A/S" },
+  { number: "3877", bank: "Danske Bank A/S" },
 
-  { numero: "0019", banco: "Deutsche Bank SAE" },
+  { number: "0019", bank: "Deutsche Bank SAE" },
 
-  { numero: "0239", banco: "EVO Banco" },
+  { number: "0239", bank: "EVO Banco" },
 
-  { numero: "2085", banco: "Ibercaja Banco" },
+  { number: "2085", bank: "Ibercaja Banco" },
 
-  { numero: "1465", banco: "ING Bank NV" },
+  { number: "1465", bank: "ING Bank NV" },
 
-  { numero: "2095", banco: "Kutxabank" },
+  { number: "2095", bank: "Kutxabank" },
 
-  { numero: "2048", banco: "Liberbank" },
+  { number: "2048", bank: "Liberbank" },
 
-  { numero: "0131", banco: "Novo Banco" },
+  { number: "0131", bank: "Novo Banco" },
 
-  { numero: "0073", banco: "Open Bank" },
+  { number: "0073", bank: "Open Bank" },
 
-  { numero: "0108", banco: "Société Générale" },
+  { number: "0108", bank: "Société Générale" },
 
-  { numero: "2103", banco: "Unicaja Banco" },
+  { number: "2103", bank: "Unicaja Banco" },
 ];
