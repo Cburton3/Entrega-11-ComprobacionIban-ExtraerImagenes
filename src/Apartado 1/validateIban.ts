@@ -96,6 +96,16 @@ const getInputValue = (): string => {
   }
 };
 
+// if(typeof document !== 'undefined') {
+//   const searchButton = document.querySelector("#searchButton");
+//   if(searchButton) {
+//     searchButton.addEventListener("click", () => {
+//       handleIban();
+//       console.log("button clicked");
+//     });
+//   }
+// }
+
 const searchButton = document.querySelector("#searchButton");
 if (searchButton && searchButton instanceof HTMLButtonElement) {
   searchButton.addEventListener("click", () => {
