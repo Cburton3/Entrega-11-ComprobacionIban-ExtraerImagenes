@@ -57,11 +57,7 @@ describe("validateIban", () => {
       control: "72",
       account: "2030876293",
     };
-    //     console.log("El banco es:", 'Banca March');
-    //     console.log("El sucursal es:", '0100');
-    //     console.log("Los digitos de control son:", '72');
-    //     console.log("El número de cuenta es:", '2030876293');
-
+  
     expect(result).toEqual(expected);
   });
 });

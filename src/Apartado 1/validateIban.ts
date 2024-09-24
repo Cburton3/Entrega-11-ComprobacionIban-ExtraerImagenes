@@ -63,7 +63,7 @@ const createPElement = (text: string): void => {
 
 export const validateIban = (value: string): any | false => {
   const patton =
-    /^[A-Z]{2}\d{2}(\s|-)?(?<bank>\d{4})(\s|\.|-)?(?<branch>\d{4})(\s|\.|-)?(?<control>\d{2})(\s|\.|-)?(?<account>\d{10})$/;
+    /^[A-Z]{2}\d{2}(\s|-|\.)?(?<bank>\d{4})(\s|\.|-)?(?<branch>\d{4})(\s|\.|-)?(?<control>\d{2})(\s|\.|-)?(?<account>\d{10})$/;
 
   const coincidence = patton.exec(value);
 
