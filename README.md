@@ -1,11 +1,5 @@
-# typescript-sandbox
+This project is made up of 2 parts. The first checks an Iban and breaks down its various elements such as bank, branch and account number. The second allows users to paste in segments of html and it returns all the img tags URLs.
 
-Para la parte de cada módulo en la que te planteamos ejercicios con JavaScript puedes usar este sandbox.
+Both of these parts have been done in ts and have used a Regular Expression in order to filter through the pasted-in HTML links. 
 
-Pasos:
-
-- Clonate el proyecto.
-- Instala las dependencias con `npm install`.
-- Ejecuta el sandbox con `npm run dev`.
-- Abre el navegador en `http://localhost:5173/` (si ese puerto no te funciona, mira en la consola donde has hecho el build, puede que este ocupado y se haya abierto en otro puerto).
-- Puedes empezar a meter tu código en el fichero:
+NB the banks used are banks that are common to Spain with some European banks. Barclays is there for no actual reason. 

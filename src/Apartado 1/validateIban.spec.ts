@@ -4,6 +4,15 @@ import {
   validateIban,
 } from "./validateIban";
 
+beforeEach(() => {
+  document.body.innerHTML = `
+    <div id="message"></div>
+    <div id="results"></div>
+    <input id="input" type="text" />
+    <button id="searchButton">Search</button>
+  `;
+});
+
 describe("isIbanFormatCorrect", () => {
   test.each([
     ["ES21 1465 0100 72 2030876293", true],
@@ -60,4 +69,21 @@ describe("validateIban", () => {
   
     expect(result).toEqual(expected);
   });
+
+  it("should manipulate the DOM and display the result", () => {
+    // Arrange
+    const iban = "ES21 0061 0100 72 2030876293";
+    const inputField = document.getElementById("input") as HTMLInputElement;
+    const resultsContainer = document.getElementById("results");
+
+    inputField.value = iban;
+
+    // Act
+    validateIban(iban);
+
+    // Assert
+    expect(resultsContainer?.innerHTML).toContain("The IBan is valid");
+    expect(resultsContainer?.innerHTML).toContain("BanK: Banca March");
+  });
 });
+

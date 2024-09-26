@@ -119,3 +119,5 @@ const handleIban = () => {
   isIbanFormatCorrect(userInput);
   validateIban(userInput);
 };
+
+// document.addEventListener("DOMContentLoaded", handleIban);
