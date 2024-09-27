@@ -1,16 +1,15 @@
-import {
-  isIbanFormatCorrect,
-  getBankViaNumber,
-} from "./validatiban";
+import { isIbanFormatCorrect } from "./ui";
 
-beforeEach(() => {
-  document.body.innerHTML = `
-    <div id="message"></div>
-    <div id="results"></div>
-    <input id="input" type="text" />
-    <button id="searchButton">Search</button>
-  `;
-});
+import { getBankViaNumber } from "./motor";
+
+// beforeEach(() => {
+//   document.body.innerHTML = `
+//     <div id="message"></div>
+//     <div id="results"></div>
+//     <input id="input" type="text" />
+//     <button id="searchButton">Search</button>
+//   `;
+// });
 
 describe("isIbanFormatCorrect", () => {
   test.each([
