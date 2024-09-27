@@ -1,6 +1,6 @@
-import { Bank } from "./modelo-Iban";
+import { Bank } from "./model-Iban";
 
-export const bancos: Bank[] = [
+export const banks: Bank[] = [
   { number: "2080", bank: "Abanca Corporación Bancaria" },
 
   { number: "0061", bank: "Banca March" },
