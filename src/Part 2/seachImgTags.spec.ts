@@ -1,4 +1,4 @@
-import { getAllImageURL } from "./searchImageTags";
+import { getAllImageURL } from "./motor";
 
 describe("getAllImageURL", () => {
   it("inserts HTML and returns all url tags", () => {

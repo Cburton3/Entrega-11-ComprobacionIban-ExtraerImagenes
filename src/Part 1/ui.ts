@@ -24,7 +24,7 @@ export const isIbanFormatCorrect = (iban: string): void => {
   }
 };
 
-const validateIban = (iban: string) => {
+export const validateIban = (iban: string) => {
   const patton =
     /^[A-Z]{2}\d{2}(\s|-|\.)?(?<bank>\d{4})(\s|\.|-)?(?<branch>\d{4})(\s|\.|-)?(?<control>\d{2})(\s|\.|-)?(?<account>\d{10})$/;
 
@@ -74,7 +74,3 @@ export const handleIban = () => {
   isIbanFormatCorrect(userInput);
   // validateIban(userInput);
 };
-
-
-
-
