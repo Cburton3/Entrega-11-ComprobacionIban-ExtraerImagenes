@@ -5,6 +5,7 @@ const getInputValue = (): string => {
   const inputField = document.querySelector("#input");
   if (inputField && inputField instanceof HTMLInputElement) {
     const transformedIban = inputField.value.replace(/[\s-]/g, ""); //quita los espacios
+    console.log('Iban retrieved')
     return transformedIban;
   } else {
     throw new Error("No value for input found");
@@ -72,5 +73,5 @@ const createPElement = (text: string): void => {
 export const handleIban = () => {
   const userInput = getInputValue();
   isIbanFormatCorrect(userInput);
-  // validateIban(userInput);
+  validateIban(userInput);
 };
